@@ -14,6 +14,11 @@ return new class extends Migration
         Schema::create('blog_posts', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
+            $table->text("blog_post_title");
+            $table->text("blog_post_content");
+
+
+            $table->foreignId('blog_id')->constrained()->onDelete('cascade');
         });
     }
 

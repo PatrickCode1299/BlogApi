@@ -14,6 +14,11 @@ return new class extends Migration
         Schema::create('blogs', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
+            $table->text("blog_name");
+            $table->text("blog_category");
+
+
+
         });
     }
 

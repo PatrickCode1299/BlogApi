@@ -13,16 +13,16 @@ class BlogPosts extends Model
     protected $fillable = [
         "blog_post_title",
         "blog_post_content",
-        "blog_post_id",
+        "blog_id",
 
     ];
     public function blog(){
         return $this->belongsTo(Blog::class);
     }
     public function PostComment(){
-        return $this->hasMany(PostComment::class);
+        return $this->hasMany(PostComment::class, 'blog_post_id');
     }
      public function PostLike(){
-        return $this->hasMany(PostLike::class);
+        return $this->hasMany(PostLike::class, 'blog_post_id');
     }
 }

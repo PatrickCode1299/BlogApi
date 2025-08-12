@@ -8,7 +8,7 @@ class PostComment extends Model
 {
     //
     protected $fillable = [
-        "comment",
+        "comments",
         "comment_id",
         "post_id"
     ];

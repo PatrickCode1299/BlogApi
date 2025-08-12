@@ -14,6 +14,11 @@ return new class extends Migration
         Schema::create('post_comments', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
+            $table->text("comments");
+            $table->text("comment_id");
+
+            $table->foreignId('blog_post_id')->constrained()->onDelete('cascade');
+
         });
     }
 
