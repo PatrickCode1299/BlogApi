@@ -1,0 +1,152 @@
+{
+  "info": {
+    "_postman_id": "12345678-90ab-cdef-1234-567890abcdef",
+    "name": "Blog API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Blogs",
+      "item": [
+        {
+          "name": "Get all blogs",
+          "request": {
+            "method": "GET",
+            "header": [
+              { "key": "Authorization", "value": "vg@123" }
+            ],
+            "url": { "raw": "http://127.0.0.1:8000/api/blogs", "protocol": "http", "host": ["127","0","0","1"], "port": "8000", "path": ["api","blogs"] }
+          }
+        },
+        {
+          "name": "Create a blog",
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "Authorization", "value": "vg@123" },
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"name\":\"My Blog\",\"description\":\"Blog description\"}"
+            },
+            "url": { "raw": "http://127.0.0.1:8000/api/blogs", "protocol": "http", "host": ["127","0","0","1"], "port": "8000", "path": ["api","blogs"] }
+          }
+        },
+        {
+          "name": "Get a blog by ID",
+          "request": {
+            "method": "GET",
+            "header": [{ "key": "Authorization", "value": "vg@123" }],
+            "url": { "raw": "http://127.0.0.1:8000/api/blogs/1", "protocol": "http", "host": ["127","0","0","1"], "port": "8000", "path": ["api","blogs","1"] }
+          }
+        },
+        {
+          "name": "Update a blog",
+          "request": {
+            "method": "PUT",
+            "header": [
+              { "key": "Authorization", "value": "vg@123" },
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"name\":\"Updated Blog Name\",\"description\":\"Updated description\"}"
+            },
+            "url": { "raw": "http://127.0.0.1:8000/api/blogs/1", "protocol": "http", "host": ["127","0","0","1"], "port": "8000", "path": ["api","blogs","1"] }
+          }
+        },
+        {
+          "name": "Delete a blog",
+          "request": {
+            "method": "DELETE",
+            "header": [{ "key": "Authorization", "value": "vg@123" }],
+            "url": { "raw": "http://127.0.0.1:8000/api/blogs/1", "protocol": "http", "host": ["127","0","0","1"], "port": "8000", "path": ["api","blogs","1"] }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Blog Posts",
+      "item": [
+        {
+          "name": "Get posts for a blog",
+          "request": {
+            "method": "GET",
+            "header": [{ "key": "Authorization", "value": "vg@123" }],
+            "url": { "raw": "http://127.0.0.1:8000/api/blogs/1/posts", "protocol": "http", "host": ["127","0","0","1"], "port": "8000", "path": ["api","blogs","1","posts"] }
+          }
+        },
+        {
+          "name": "Create a post in a blog",
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "Authorization", "value": "vg@123" },
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"blog_post_title\":\"New Post\",\"blog_post_content\":\"This is the post content.\"}"
+            },
+            "url": { "raw": "http://127.0.0.1:8000/api/blogs/1/posts", "protocol": "http", "host": ["127","0","0","1"], "port": "8000", "path": ["api","blogs","1","posts"] }
+          }
+        },
+        {
+          "name": "Get a post by ID",
+          "request": {
+            "method": "GET",
+            "header": [{ "key": "Authorization", "value": "vg@123" }],
+            "url": { "raw": "http://127.0.0.1:8000/api/blogs/1/posts/5", "protocol": "http", "host": ["127","0","0","1"], "port": "8000", "path": ["api","blogs","1","posts","5"] }
+          }
+        },
+        {
+          "name": "Update a post",
+          "request": {
+            "method": "PUT",
+            "header": [
+              { "key": "Authorization", "value": "vg@123" },
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"blog_post_title\":\"Updated Title\",\"blog_post_content\":\"Updated content here.\"}"
+            },
+            "url": { "raw": "http://127.0.0.1:8000/api/blogs/1/posts/5", "protocol": "http", "host": ["127","0","0","1"], "port": "8000", "path": ["api","blogs","1","posts","5"] }
+          }
+        },
+        {
+          "name": "Delete a post",
+          "request": {
+            "method": "DELETE",
+            "header": [{ "key": "Authorization", "value": "vg@123" }],
+            "url": { "raw": "http://127.0.0.1:8000/api/blogs/1/posts/5", "protocol": "http", "host": ["127","0","0","1"], "port": "8000", "path": ["api","blogs","1","posts","5"] }
+          }
+        },
+        {
+          "name": "Like a post",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Authorization", "value": "vg@123" }],
+            "url": { "raw": "http://127.0.0.1:8000/api/posts/5/like", "protocol": "http", "host": ["127","0","0","1"], "port": "8000", "path": ["api","posts","5","like"] }
+          }
+        },
+        {
+          "name": "Comment on a post",
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "Authorization", "value": "vg@123" },
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"comment\":\"This is super interesting!\"}"
+            },
+            "url": { "raw": "http://127.0.0.1:8000/api/posts/5/comment", "protocol": "http", "host": ["127","0","0","1"], "port": "8000", "path": ["api","posts","5","comment"] }
+          }
+        }
+      ]
+    }
+  ]
+}
