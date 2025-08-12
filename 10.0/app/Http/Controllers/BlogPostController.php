@@ -13,6 +13,7 @@ class BlogPostController extends Controller
         return BlogPosts::where('blog_id', $blog_id)->with('PostLike', 'PostComment')->get();
     }
 
+
     public function store(Request $request, $blog_id)
     {
         $data = $request->validate([
@@ -22,6 +23,7 @@ class BlogPostController extends Controller
         $data['blog_id'] = $blog_id;
         return BlogPosts::create($data);
     }
+
 
     public function show($blog_id, $id)
     {
@@ -38,10 +40,12 @@ class BlogPostController extends Controller
         return $post;
     }
 
+
     public function destroy($blog_id, $id)
     {
         return BlogPosts::where('blog_id', $blog_id)->where('id', $id)->delete();
     }
+
 
     public function like($id)
     {
@@ -49,6 +53,7 @@ class BlogPostController extends Controller
         $post->PostLike()->create(['like_id' => auth()->id() ?? 1]);
         return ['message' => 'Post liked successfully'];
     }
+
 
     public function comment(Request $request, $id)
     {
@@ -59,4 +64,5 @@ class BlogPostController extends Controller
         ]);
         return ['message' => 'Comment added successfully'];
     }
+
 }
