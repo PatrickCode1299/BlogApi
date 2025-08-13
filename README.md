@@ -6,7 +6,8 @@ Next you need to ensure composer is installed on your PC and also you should hav
 
 If you haven't installed both php and composer, kindly visit this two address to download their installer, here:
 
-Composer: getcomposer.org/download/
+Composer: https://getcomposer.org/download/
+
 php: https://sourceforge.net/projects/xampp/files/latest/download
 
 If you already did the step above you can proceed to this phase:
