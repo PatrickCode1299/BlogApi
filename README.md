@@ -1,6 +1,15 @@
-On windows run cmd and do git clone https://github.com/PatrickCode1299/BlogApi.git  cd into the directory you cloned the repo and cd into 10.0 once more.
+On windows run cmd and do git clone https://github.com/PatrickCode1299/BlogApi.git  cd into the directory you cloned the repo and cd into 10.0 directory once more.
+Next you need to ensure composer is installed on your PC and also you should have already installed XAMPP and add php to it's path.
+If you haven't installed both php and composer, kindly visit this two address to download their installer, here:
 
-While in the working directory run this command composer update.
+Composer: getcomposer.org/download/
+php: https://sourceforge.net/projects/xampp/files/latest/download
+
+If you already did the step above you can proceed to this phase:
+
+While in the 10.0 working directory run this command 
+
+composer update.
 
 Next run php artisan migrate
 
