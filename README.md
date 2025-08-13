@@ -1,5 +1,9 @@
-On windows run cmd and do git clone https://github.com/PatrickCode1299/BlogApi.git  cd into the directory you cloned the repo and cd into 10.0 directory once more.
+On windows run cmd and do git clone https://github.com/PatrickCode1299/BlogApi.git  
+
+cd into the directory you cloned the repo and cd into 10.0 directory once more.
+
 Next you need to ensure composer is installed on your PC and also you should have already installed XAMPP and add php to it's path.
+
 If you haven't installed both php and composer, kindly visit this two address to download their installer, here:
 
 Composer: getcomposer.org/download/
