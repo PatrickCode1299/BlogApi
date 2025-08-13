@@ -12,7 +12,7 @@ php: https://sourceforge.net/projects/xampp/files/latest/download
 
 If you already did the step above you can proceed to this phase:
 
-While in the 10.0 working directory run this command 
+While in the 10.0 working directory run this command in CMD terminal 
 
 composer update.
 
